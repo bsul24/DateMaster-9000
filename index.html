@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DateMaster 9000</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pinyon+Script">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Simonetta">
+    </head>
+    <body>
+        <h1 id="title">DateMaster 9000</h1>
+        <p id="description">
+          Computers can't fall in love, but you sure can! So make the computer do the work for you
+        </p>
+        <form id="survey-form">
+          <label for="name" id="name-label">Name:</label>
+          <br>
+          <input required type="text" id="name" class="text-field" name="name" placeholder="Enter name here">
+          <label for="email" id="email-label">Email:</label>
+          <br>
+          <input required type="email" id="email" class="text-field" name="email" placeholder="Enter email here">
+          <label for="number" id="number-label">Age:</label>
+          <br>
+          <input required type="number" id="number" class="text-field" name="number" min="18" max="200" placeholder="Enter age here">
+          <label for="dropdown">Interested in dating:</label>
+          <br>
+          <select required name="dropdown" id="dropdown">
+            <option value="" disabled selected>Select one</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="other">Non-binary</option>
+            <option value="no preferences">No Preferences</option>
+          </select>
+          <fieldset>
+            <legend>On Friday nights I prefer to:</legend>
+            <input id="out" type="radio" name="activity" value="out">
+            <label for="out">Go out</label><br>
+            <input id="in" type="radio" name="activity" value="in">
+            <label for="in">Stay in</label><br>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Check all that apply:</legend>
+            <div>
+              <input type="checkbox" id="option1" name="date" value="option1">
+              <label for="option1">Option 1</label>
+            </div>
+            <div>
+              <input type="checkbox" id="option2" name="date" value="option2">
+              <label for="option2">Option 2</label>
+            </div>
+          </fieldset>
+          <br>
+          <label for="about">Tell us a little about yourself:</label>
+          <br>
+          <textarea id="about" name="about" placeholder="Add some personal info here"></textarea>
+          <input type="submit" id="submit">
+        </form>
+      </body>
+</html>
