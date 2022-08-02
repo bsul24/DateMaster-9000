@@ -1,61 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DateMaster 9000</title>
-        <link rel="stylesheet" href="CSS\style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pinyon+Script">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Simonetta">
-    </head>
-    <body>
-        <h1 id="title">DateMaster 9000</h1>
-        <p id="description">
-          Computers can't fall in love, but you sure can! So make the computer do the work for you
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DateMaster 9000</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS\style.css" />
+  </head>
+  <body>
+    <header>
+      <p class="header-filler">####</p>
+      <h1 class="header-title">DateMaster 9000</h1>
+      <p class="header-subtitle">
+        <i
+          >Computers can't fall in love, but you sure can! So make the computer
+          do the work for you</i
+        >
+      </p>
+    </header>
+    <form>
+      <div class="form-option">
+        <label for="name" class="form-option-title">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="input-text"
+          placeholder="Enter name here"
+          required
+        />
+      </div>
+      <div class="form-option">
+        <label for="email" class="form-option-title">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="input-text"
+          placeholder="Enter email here"
+          required
+        />
+      </div>
+      <div class="form-option">
+        <label for="age" class="form-option-title">Age</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="18"
+          class="input-text"
+          placeholder="Age"
+          required
+        />
+      </div>
+      <div class="form-option">
+        <label for="interested" class="form-option-title"
+          >Interested in dating:</label
+        >
+        <select id="interested" name="interested" required>
+          <option value disabled selected>Select one</option>
+          <option value="men">Men</option>
+          <option value="women">Women</option>
+          <option value="non-binary">Non-binary</option>
+          <option value="no-preference">No preference</option>
+        </select>
+      </div>
+      <div class="form-option">
+        <p>On Friday nights I prefer to:</p>
+        <div class="form-selection">
+          <input id="out" type="radio" name="activity" value="out" required />
+          <label for="out" class="form-selection-label">Go out</label>
+        </div>
+        <div class="form-selection">
+          <input id="in" type="radio" name="activity" value="in" />
+          <label for="in" class="form-selection-label">Stay in</label>
+        </div>
+      </div>
+      <div class="form-option">
+        <p>Kids?</p>
+        <div class="form-selection">
+          <input id="have" type="radio" name="kids" value="have" required />
+          <label for="have" class="form-selection-label">Have</label>
+        </div>
+        <div class="form-selection">
+          <input id="want" type="radio" name="kids" value="want" />
+          <label for="want" class="form-selection-label">Want</label>
+        </div>
+        <div class="form-selection">
+          <input id="dont-want" type="radio" name="kids" value="dont-want" />
+          <label for="dont-want" class="form-selection-label">Don't want</label>
+        </div>
+      </div>
+      <div class="form-option">
+        <p>
+          What type of relationship are you looking for? (Select all that apply)
         </p>
-        <form id="survey-form">
-          <label for="name" id="name-label">Name:</label>
-          <br>
-          <input required type="text" id="name" class="text-field" name="name" placeholder="Enter name here">
-          <label for="email" id="email-label">Email:</label>
-          <br>
-          <input required type="email" id="email" class="text-field" name="email" placeholder="Enter email here">
-          <label for="number" id="number-label">Age:</label>
-          <br>
-          <input required type="number" id="number" class="text-field" name="number" min="18" max="200" placeholder="Enter age here">
-          <label for="dropdown">Interested in dating:</label>
-          <br>
-          <select required name="dropdown" id="dropdown">
-            <option value="" disabled selected>Select one</option>
-            <option value="men">Men</option>
-            <option value="women">Women</option>
-            <option value="other">Non-binary</option>
-            <option value="no preferences">No Preferences</option>
-          </select>
-          <fieldset>
-            <legend>On Friday nights I prefer to:</legend>
-            <input id="out" type="radio" name="activity" value="out">
-            <label for="out">Go out</label><br>
-            <input id="in" type="radio" name="activity" value="in">
-            <label for="in">Stay in</label><br>
-          </fieldset>
-          <br>
-          <fieldset>
-            <legend>Check all that apply:</legend>
-            <div>
-              <input type="checkbox" id="option1" name="date" value="option1">
-              <label for="option1">Option 1</label>
-            </div>
-            <div>
-              <input type="checkbox" id="option2" name="date" value="option2">
-              <label for="option2">Option 2</label>
-            </div>
-          </fieldset>
-          <br>
-          <label for="about">Tell us a little about yourself:</label>
-          <br>
-          <textarea id="about" name="about" placeholder="Add some personal info here"></textarea>
-          <input type="submit" id="submit">
-        </form>
-      </body>
+        <div class="form-selection">
+          <input id="short" type="checkbox" name="rel-type" value="short" />
+          <label for="short" class="form-selection-label">Short term</label>
+        </div>
+        <div class="form-selection">
+          <input id="long" type="checkbox" name="rel-type" value="long" />
+          <label for="long" class="form-selection-label">Long term</label>
+        </div>
+        <div class="form-selection">
+          <input id="open" type="checkbox" name="rel-type" value="open" />
+          <label for="open" class="form-selection-label">Open</label>
+        </div>
+        <div class="form-selection">
+          <input id="other" type="checkbox" name="rel-type" value="other" />
+          <label for="other" class="form-selection-label">Other</label>
+        </div>
+      </div>
+      <div class="form-option">
+        <p>Tell us a little about yourself:</p>
+        <textarea
+          class="input-text"
+          placeholder="Add some personal info here"
+        ></textarea>
+      </div>
+      <div class="form-option">
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+      </div>
+    </form>
+  </body>
 </html>
